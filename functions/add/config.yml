@@ -1,0 +1,20 @@
+## Required
+configs:
+  state_s3_bucket: lambda-dk-s3-bucket
+  role_arn: Basic-Lambda-Role
+  function_name: add
+
+## Required
+handler_config:
+  timeout: 60
+  memory_size: 128
+
+## Required
+tags:
+
+## Required
+envs:
+#   a: 10
+#   b: 20
+#   c: 30
+#   d: 40
