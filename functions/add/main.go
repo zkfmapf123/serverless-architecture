@@ -2,27 +2,25 @@ package main
 
 import (
 	"context"
-	"fmt"
 
 	"github.com/aws/aws-lambda-go/lambda"
 )
 
-type MyEvent struct {
+type Request struct {
 	A int `json:"a"`
 	B int `json:"b"`
 }
 
-func HandleRequest(ctx context.Context, e *MyEvent) (*int, error) {
-	if e == nil {
-		return nil, fmt.Errorf("received nil event %v", e)
-	}
-
-	res := add(e.A, e.B)
-	return &res, nil
+type Response struct {
+	Result int `json:"result"`
 }
 
-func add(a, b int) int {
-	return a + b
+func HandleRequest(ctx context.Context, req Request) (Response, error) {
+	resp := Response{
+		Result: req.A + req.B,
+	}
+
+	return resp, nil
 }
 
 func main() {

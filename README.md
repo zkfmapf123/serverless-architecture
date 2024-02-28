@@ -11,3 +11,5 @@
 ## Documents
 
 - [Lambda함수의 한계점](./documents/1.md)
+- [API Gateway](./documents/2.md)
+- [Step Function](./documents/3.md)
