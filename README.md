@@ -14,3 +14,7 @@
 - [API Gateway](./documents/2.md)
 - [Step Function](./documents/3.md)
 - [EFS](./documents/4.md)
+
+    ```sh
+        cd functions/efs-write
+    ```
